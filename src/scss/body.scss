@@ -1,0 +1,14 @@
+.body {
+  font-family: "TT Lakes", sans-serif;
+  background-color: $bgColor;
+  color: $text;
+  position: relative;
+  //обработка вертикального скролла, закрываюшего кнопки
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-direction: row;
+  }
+}

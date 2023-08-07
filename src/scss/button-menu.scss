@@ -1,0 +1,39 @@
+.button-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+
+  @media (min-width: $screen-lg) {
+    gap: 0;
+  }
+
+  &__button {
+    vertical-align: middle;
+  }
+
+  &__element--desktop-view {
+    display: none;
+
+    @media (min-width: $screen-lg){
+      display: list-item;
+      margin-right: 32px;
+    }
+  }
+
+  &__element--tablet-view {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: list-item;
+    }
+
+    &:nth-child(3) {
+
+      @media (min-width: $screen-md) {
+        margin-right: 26px;
+      }
+    }
+  }
+
+
+}

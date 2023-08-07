@@ -1,0 +1,135 @@
+.brand-card {
+  width: 206px;
+  /*height: 72px;*/
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+
+  @media (min-width: $screen-md) {
+    width: 190px;
+  }
+
+  @media (min-width: $screen-l) {
+    width: 206px;
+  }
+
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    max-height: 40px;
+    max-width: 128px;
+  }
+
+  &__link {
+    &--device{
+      align-self: flex-end;
+    }
+  }
+
+  &--device {
+    height: 126px;
+  }
+
+  &__device-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+    align-self: flex-start;
+  }
+
+
+  &--price {
+    width: 226px;
+    height: 166px;
+    border: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      width: auto;
+      height: 32px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &--price-header {
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      border: none;
+      height: 32px;
+      background-color: $bgColor;
+      margin-top: -24px;
+    }
+  }
+
+  &__price-mini-title {
+    color: $secondText;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    opacity: 0.7218;
+    margin-bottom: -15px;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    &--header {
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+
+  }
+
+  &__price-text {
+    color: $text;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    @media (min-width: $screen-md) {
+
+    &--service {
+      @media (min-width: $screen-md) {
+        width: 350px;
+        flex-grow: 1;
+      }
+    }
+
+    &--cost {
+      @media (min-width: $screen-md) {
+        width: 100px;
+        flex-grow: 1;
+      }
+    }
+
+    &--duration {
+      @media (min-width: $screen-md) {
+        width: 200px;
+        flex-grow: 1;
+      }
+    }
+  }}
+
+  &__order-send-button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+
+  }
+}

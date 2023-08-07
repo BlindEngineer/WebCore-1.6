@@ -1,0 +1,116 @@
+.about {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  @media (min-width: $screen-lg) {
+    gap: 36px;
+  }
+
+  &__text-part {
+    padding: 0 16px 16px;
+
+    @media (min-width: $screen-md){
+      width: 312px;
+      flex-grow: 1;
+      padding-left: 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 490px;
+      padding-left: 34px;
+    }
+  }
+
+  &__text-content {
+    max-height: 90px;
+    overflow: hidden;
+    transition:max-height 400ms ease-in-out;
+
+    @media (min-width: $screen-md){
+      max-height: 160px;
+    }
+
+    &--opened {
+      max-height: 700px;
+      overflow: auto;
+      height: auto;
+    }
+  }
+
+  &__text-paragraph {
+    color: $text;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    padding-bottom: 18px;
+
+    @media (min-width: $screen-md){
+      line-height: 20px;
+    }
+  }
+
+  &__text-expand {
+    font-family: "TT Lakes", sans-serif;
+    color: $text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    border: none;
+    background-color: transparent;
+    margin-left: 32px;
+    margin-top: 16px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      left: -32px;
+      border-radius: 4px;
+      content: url('../img/expand.svg');
+    }
+
+    &--opened::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__image-part {
+    background-image: url("../img/logoOnDesk.jpg");
+    min-height: 180px;
+    max-height: 300px;
+    height: 56.25vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-md) {
+      flex-grow: 1;
+      width: 360px;
+      height: 208px;
+      border-radius: 6px;
+      margin-bottom: 40px;
+      margin-right: 25px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 531px;
+      height: 307px;
+      border-radius: 6px;
+      margin-bottom: 40px;
+      margin-right: 28px;
+    }
+  }
+}

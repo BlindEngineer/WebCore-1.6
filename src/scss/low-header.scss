@@ -1,0 +1,54 @@
+.low-header {
+  padding-bottom: 14px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 0;
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    overflow-x: auto;
+    padding-left: 16px;
+    padding-bottom: 10px;
+
+    @media (min-width: $screen-md){
+      padding-left: 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 32px;
+      padding-right: 32px;
+      flex-wrap: wrap;
+    }
+  }
+  &__element {
+    white-space: nowrap;
+    display: flex;
+    height: 40px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+  }
+  &__element-link {
+    text-decoration: none;
+    color: $secondText;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    text-align: center;
+    padding: 7px 14px;
+    border: 2px solid transparent;
+
+    &:hover {
+      height: 40px;
+      border-radius: 6px;
+      border: 2px solid $menuActiveBorder;
+      background: $bgMenu;
+    }
+  }
+}

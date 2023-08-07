@@ -1,0 +1,60 @@
+.footer{
+  border-top: 1px solid $decorLines;
+
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 16px 19px;
+    row-gap: 16px;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      padding: 32px 24px 24px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @media (min-width: $screen-l) {
+      padding: 32px 32px 24px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    text-decoration: none;
+    color: $secondText;
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 14px;
+
+    @media (min-width: $screen-md) {
+      width: 220px;
+    }
+
+    &--copyright{
+      width: 220px;
+      white-space: pre-line;
+      @media (min-width: $screen-md) {
+        text-align: left;
+      }
+
+    }
+    &--policy-link{}
+
+    &--offer{
+
+      @media (min-width: $screen-md) {
+        text-align: right;
+      }
+
+      @media (min-width: $screen-l) {
+        width: 330px;
+      }
+
+    }
+  }
+
+
+}

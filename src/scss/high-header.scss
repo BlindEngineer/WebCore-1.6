@@ -1,0 +1,30 @@
+.high-header {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+  background-color: $bgMenu;
+  border-bottom: solid 1px $decorLines;
+
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+
+  &__left-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: 16px;
+
+    &--tablet-view {
+      @media (min-width: $screen-md) {
+        margin-left: 43px;
+      }
+    }
+  }
+}
+
+

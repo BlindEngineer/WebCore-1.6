@@ -1,0 +1,22 @@
+.order-send-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 16px;
+  background-color: $criticalText;
+  padding-left: 12px;
+  padding-right: 8px;
+  height: 32px;
+  width: 119px;
+  color: $bgMenu;
+  font-family: TT Lakes, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  cursor: pointer;
+}

@@ -1,0 +1,117 @@
+.modal-communication {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+  background: $bgMenu;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.20),
+  -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+  padding: 24px 16px 0;
+  z-index: 15;
+  transform: scale(0); //скрыли визуально
+  transition: transform 150ms ease-in-out;
+
+  @media (min-width: $screen-md) {
+    width: 440px;
+    padding: 40px 32px 0;
+  }
+
+  &--opened {
+    transform: scale(1);
+  }
+
+
+
+  &__close-button {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      top: 32px;
+      left: -72px;
+    }
+
+  }
+
+  &__modal-title {
+    color: $text;
+    padding-bottom: 24px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      overflow: hidden;
+      width: 8px;
+      height: 40px;
+      background-color: $decorBorderColor;
+      left: -4px;
+      border-radius: 4px;
+      content: '';
+
+      @media (min-width: $screen-md){
+        width: 3px;
+        left: -1.5px;
+      }
+
+      @media (min-width: $screen-lg){
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-input {
+    border-radius: 8px;
+    border: 1px solid $menuBorder;
+    background: $bgMenu;
+    height: 48px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+
+    &--textarea {
+      padding-top: 12px;
+      height: 118px;
+    }
+
+    &::placeholder {
+      color: $placeholderText;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  &__explanation-text {
+    color: $secondText;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    max-width: 380px;
+    margin-bottom: 24px;
+  }
+
+  &__explanation-text-link {
+    text-decoration: none;
+    color: $criticalText;
+  }
+
+  &__form-label {
+    color: transparent;
+    font-size: 0;
+  }
+
+  &__submit {
+width: 136px;
+    align-self: flex-end;
+
+  }
+
+}

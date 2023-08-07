@@ -1,0 +1,140 @@
+.left-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  width: 100vw;
+  //height: 1024px;
+  background: $bgMenu;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.20),
+  -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+  padding: 19px 16px 0;
+  z-index: 10;
+  transform: scale(0); //скрыли визуально
+  transition: transform 150ms ease-in-out;
+
+  @media (min-width: $screen-md) {
+    width: 320px;
+  }
+
+  @media (min-width: $screen-lg) {
+    position: static;
+    display: block;
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  &--active {
+    transform: scale(1);
+  }
+
+  &__logo-part {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: right;
+  }
+
+  &__logo-part-button--search{
+    flex-grow: 1;
+    justify-content: right;
+  }
+
+  &__button-image--modal-close{
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-left: 17px;
+    margin-right: 78px;
+
+  }
+
+  &__menu {
+    list-style: none;
+    margin-bottom: 268px;
+  }
+
+  &__menu-item {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+
+  &__menu-link {
+    text-decoration: none;
+    color: #1B1C21;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 8px white;
+    transition: box-shadow 0.3s linear;
+
+    &--active {
+      color: #7E7E82;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        left: -18px;
+        top: -5px;
+        width: 4px;
+        height: 32px;
+        border-radius: 2px;
+        background-color: #41F6D7;
+      }
+    }
+
+    &:not(.left-side__menu-link--active):hover {
+      box-shadow: 0 0 0 8px white, 5px 5px 10px 4px #41F6D7;
+    }
+  }
+
+  &__bottom-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__bottom-email {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding-bottom: 12px;
+  }
+
+  &__bottom-number {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    padding-bottom: 40px;
+  }
+
+  &__language-select-form {
+    padding-bottom: 32px;
+  }
+
+
+  &__language-select-radio {
+    display: none;
+
+    &:checked + .left-side__language-select-label{
+      color: #7E7E82;
+    }
+  }
+
+  &__language-select-label{
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+  }
+}
