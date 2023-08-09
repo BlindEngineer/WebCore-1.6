@@ -1,7 +1,7 @@
 .modal-communication {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   min-width: 320px;
   width: 100vw;
   height: 100vh;
@@ -16,6 +16,8 @@
   @media (min-width: $screen-md) {
     width: 440px;
     padding: 40px 32px 0;
+    left: auto;
+    right: 0;
   }
 
   &--opened {
