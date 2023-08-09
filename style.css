@@ -1253,9 +1253,9 @@ input, textarea {
     letter-spacing: -0.2px; }
 
 .modal-communication {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   min-width: 320px;
   width: 100vw;
   height: 100vh;
@@ -1268,7 +1268,9 @@ input, textarea {
   @media (min-width: 768px) {
     .modal-communication {
       width: 440px;
-      padding: 40px 32px 0; } }
+      padding: 40px 32px 0;
+      left: auto;
+      right: 0; } }
   .modal-communication--opened {
     transform: scale(1); }
   .modal-communication__close-button {
